@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tharros Cleaning Service | Premium Commercial & Residential Cleaning</title>
+    <meta name="description" content="Tharros Cleaning Service delivers exceptional commercial and residential cleaning solutions with unmatched attention to detail and professional standards.">
+    <style>
+        :root {
+            --green: #2DC653;
+            --blue: #0582CA;
+            --white: #FFFFFF;
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            color: var(--white);
+            line-height: 1.6;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, var(--green) 0%, var(--blue) 100%);
+            min-height: 100vh;
+            padding: 20px 0;
+        }
+        
+        .content-container {
+            background-color: rgba(0,0,0,0.2);
+            margin: 0 auto;
+            max-width: 1200px;
+            border-radius: 15px;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        header {
+            padding: 20px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .logo-container {
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--white);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .logo:hover {
+            transform: rotate(15deg);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+        }
+        
+        .company-name {
+            margin-left: 15px;
+            font-weight: 700;
+            font-size: 1.5rem;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .banner {
+            width: 100%;
+            max-height: 500px;
+            object-fit: cover;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav ul li {
+            margin-left: 40px;
+        }
+        
+        nav ul li a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        
+        nav ul li a:hover {
+            background-color: rgba(255,255,255,0.2);
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 80px 10%;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 25px;
+            font-weight: 700;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        h2 {
+            font-size: 2.5rem;
+            margin-bottom: 30px;
+            text-shadow: 0 2px 5px rgba(0,0,0,0.3);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 15px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: rgba(255,255,255,0.8);
+        }
+        
+        .cta-button {
+            background-color: var(--white);
+            color: var(--blue);
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: inline-block;
+            margin: 30px 0;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .cta-button:hover {
+            background-color: transparent;
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+        
+        .services {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 80px 5%;
+        }
+        
+        .service-card {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 40px 30px;
+            margin: 20px;
+            width: 300px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            background-color: rgba(255,255,255,0.2);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .about {
+            padding: 80px 10%;
+            text-align: center;
+        }
+        
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .mission-statement {
+            font-style: italic;
+            font-size: 1.2rem;
+            margin: 40px auto;
+            max-width: 700px;
+            color: rgba(255,255,255,0.9);
+        }
+        
+        .contact {
+            padding: 80px 10%;
+            text-align: center;
+        }
+        
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+        
+        .contact-method {
+            margin: 20px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: rgba(255,255,255,0.1);
+            width: 200px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        
+        .contact-method:hover {
+            background-color: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+        
+        .contact-icon {
+            font-size: 2.5rem;
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .social-links {
+            margin: 50px 0;
+        }
+        
+        .social-icon {
+            margin: 0 15px;
+            font-size: 1.8rem;
+            color: var(--white);
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.2);
+            color: var(--white);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 40px;
+            background-color: rgba(0,0,0,0.3);
+        }
+        
+        .footer-logo {
+            height: 60px;
+            width: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.7);
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="gradient-bg">
+        <div class="content-container">
+            <header>
+                <div class="logo-container">
+                    <img src="images/logo.jpg" alt="Tharros Cleaning Service Logo" class="logo">
+                    <div class="company-name">THARROS</div>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </header>
+            
+            <img src="images/b.jpg" alt="Professional Cleaning Services" class="banner">
+            
+            <section class="hero">
+                <h1>Exceptional Cleaning Services</h1>
+                <p class="mission-statement">Delivering pristine environments for businesses and homes with unmatched professionalism and attention to detail.</p>
+                <a href="#contact" class="cta-button">Request Service</a>
+            </section>
+            
+            <section id="services" class="services">
+                <p class="section-title">Our Services</p>
+                <h2>Comprehensive Cleaning Solutions</h2>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3>Residential Cleaning</h3>
+                    <p>Tailored home cleaning services that respect your space and schedule, delivering spotless results every time.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Commercial Cleaning</h3>
+                    <p>Professional cleaning solutions for offices, retail spaces, and commercial properties that impress clients and employees.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-broom"></i>
+                    </div>
+                    <h3>Deep Cleaning</h3>
+                    <p>Intensive cleaning services for special occasions, seasonal refreshes, or move-in/move-out requirements.</p>
+                </div>
+            </section>
+            
+            <section id="about" class="about">
+                <p class="section-title">Who We Are</p>
+                <h2>About Tharros Cleaning Service</h2>
+                <div class="about-content">
+                    <p>Tharros Cleaning Service is a premier cleaning company dedicated to elevating standards in the cleaning industry. Founded on principles of excellence, reliability, and integrity, we bring a professional approach to every cleaning challenge.</p>
+                    
+                    <p>Our team undergoes rigorous training in the latest cleaning techniques and uses only industry-approved equipment and eco-friendly cleaning products. We understand that a clean environment is essential for health, productivity, and peace of mind.</p>
+                    
+                    <p class="mission-statement">"Our mission is to transform spaces through exceptional cleaning services that exceed expectations, while maintaining the highest standards of professionalism and environmental responsibility."</p>
+                    
+                    <p>Whether serving commercial clients who need to impress their customers or residential clients who value their home's cleanliness, we bring the same commitment to excellence to every job.</p>
+                </div>
+            </section>
+            
+            <section id="contact" class="contact">
+                <p class="section-title">Get In Touch</p>
+                <h2>Contact Tharros Cleaning</h2>
+                <p>Ready to experience the Tharros difference? Reach out through your preferred method:</p>
+                
+                <div class="contact-methods">
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>Available during business hours</p>
+                    </div>
+                    
+                    <div class="contact-method">
+                        <div class="contact-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </div>
+                        <h3>WhatsApp</h3>
+                        <p>24/7 messaging</p>
+                    </div>
+                </div>
+                
+                <div class="social-links">
+                    <p>Connect with us on social media:</p>
+                    <a href="https://bit.ly/4mMRzGR" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1B9w3N8Jc2/" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://tiktok.com/@tharroscleaningservices_" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+            </section>
+            
+            <footer>
+                <img src="images/logo.jpg" alt="Tharros Cleaning Service Logo" class="footer-logo">
+                <div class="social-links">
+                    <a href="https://bit.ly/4mMRzGR" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1B9w3N8Jc2/" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="https://tiktok.com/@tharroscleaningservices_" class="social-icon" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                </div>
+                <p class="copyright">&copy; 2023 Tharros Cleaning Service. All rights reserved.</p>
+            </footer>
+        </div>
+    </div>
+</body>
+</html>
